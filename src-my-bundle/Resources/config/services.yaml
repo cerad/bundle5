@@ -1,0 +1,23 @@
+services:
+
+    #_defaults:
+    #    autowire: true
+    #    autoconfigure: true
+
+    #MyBundle\:
+    #    resource: '../../'
+    #    exclude:
+    #        - '../../Resources/'
+    #        - '../../DependencyInjection/'
+    #        - '../../Entity/'
+
+    my_bundle.controller.my_controller:
+        class: MyBundle\Controller\MyController
+        public: true
+        tags: ['container.service_subscriber']
+        autowire: true
+
+    MyBundle\Controller\MyController:
+        autowire: true
+        autoconfigure: true
+        # tags: ['container.service_subscriber'] 

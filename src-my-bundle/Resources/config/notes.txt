@@ -1,0 +1,13 @@
+==========================================================
+So the above config answers the question and is the 'right' way to do things.  It's also the way we used to do all services back before autowire was available.  However it is a bit of a pain having to constantly define your services as you create and modify classes.  And you don't get to use the various helper functions in AbstractController.
+
+If you want to speed up your development then you can use autowire for your services.  Here is an yaml example:
+```
+class MyController extends AbstractController
+...
+# Resources/config/services.yaml
+services:
+    MyBundle\Controller\MyController:
+        autowire: true
+        autoconfigure: true
+```

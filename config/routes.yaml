@@ -1,3 +1,11 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+bundle:
+    path: /x
+    controller: my_bundle.controller.my_controller::index
+
+bundle_test:
+    path: /
+    controller: my_bundle.controller.test_controller::index
